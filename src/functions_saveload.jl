@@ -4,10 +4,10 @@ function save_plot end
 
 function test_1()
   a = 1 + 1
-  println(a)
+  return a
 end
 
 function test_2()
-  a = 2 + 2
-  println(a)
+  b = 2 + 2
+  return b
 end
