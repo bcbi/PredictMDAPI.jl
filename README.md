@@ -26,14 +26,14 @@ This package provides abstract type definitions and generic function definitions
             <td>CodeCov</td>
             <td>
             <a
-            href="https://codecov.io/gh/bcbi/PredictMDExtra.jl/branch/master">
+            href="https://codecov.io/gh/bcbi/PredictMDAPI.jl/branch/master">
             <img
-            src="https://codecov.io/gh/bcbi/PredictMDExtra.jl/branch/master/graph/badge.svg"
+            src="https://codecov.io/gh/bcbi/PredictMDAPI.jl/branch/master/graph/badge.svg"
             /></a></td>
             <td>
             <a
-            href="https://codecov.io/gh/bcbi/PredictMDExtra.jl/branch/develop">
-            <img src="https://codecov.io/gh/bcbi/PredictMDExtra.jl/branch/develop/graph/badge.svg"
+            href="https://codecov.io/gh/bcbi/PredictMDAPI.jl/branch/develop">
+            <img src="https://codecov.io/gh/bcbi/PredictMDAPI.jl/branch/develop/graph/badge.svg"
             /></a></td>
         </tr>
     </tbody>
