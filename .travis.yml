@@ -12,6 +12,9 @@ branches:
 env:
     global:
         - JULIA_DEBUG="all"
+    matrix:
+        - COMPILED_MODULES="no"
+        - COMPILED_MODULES="yes"
 
 git:
     depth: 99999999
