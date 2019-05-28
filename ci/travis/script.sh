@@ -16,8 +16,8 @@ julia $JULIA_FLAGS -e '
     Pkg.test("PredictMDAPI"; coverage=true);
     '
 
-cat Project.toml
-cat Manifest.toml
+cat Project.toml || echo "Project.toml: No such file or directory"
+cat Manifest.toml || echo "Manifest.toml: No such file or directory"
 
 julia $JULIA_FLAGS -e '
     import Pkg;
@@ -31,7 +31,7 @@ julia $JULIA_FLAGS -e '
     Coverage.Codecov.submit(Coverage.Codecov.process_folder());
     '
 
-cat Project.toml
-cat Manifest.toml
+cat Project.toml || echo "Project.toml: No such file or directory"
+cat Manifest.toml || echo "Manifest.toml: No such file or directory"
 
 ##### End of file
