@@ -10,4 +10,4 @@ abstract type AbstractNonExistentUnderlyingObject end
 
 abstract type AbstractBackend end
 
-abstract type AbstractPlot{T} end
+abstract type AbstractPlot end
