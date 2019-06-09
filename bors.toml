@@ -1,3 +1,5 @@
+block_labels = [ "S-do-not-merge-yet" ]
+
 delete_merged_branches = true
 
 status = [
