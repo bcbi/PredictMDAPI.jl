@@ -1,6 +1,6 @@
 # PredictMDAPI
 
-This package provides abstract type definitions and generic function definitions for the [PredictMD](https://predictmd.net) machine learning ecosystem.
+The PredictMDAPI package provides the abstract types and generic functions that define the [PredictMD](https://predictmd.net) application programming interface (API).
 
 <table>
     <tbody>
