@@ -5,6 +5,13 @@ The PredictMDAPI package provides the abstract types and generic functions that 
 <table>
     <tbody>
         <tr>
+            <td>Bors</td>
+            <td><a href="https://bors.tech">
+            <img
+            src="https://bors.tech/images/badge_small.svg"
+            /></a></td>
+        </tr>
+        <tr>
             <td>Travis CI</td>
             <td><a href="https://travis-ci.com/bcbi/PredictMDAPI.jl/branches">
             <img
