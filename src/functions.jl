@@ -7,7 +7,6 @@ function predict end
 function predict_proba end
 function set_feature_contrasts! end
 function set_max_epochs! end
-function simple_linear_regression end
 function transform end
 
 # functions for calculating metrics
