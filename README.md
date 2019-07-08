@@ -27,4 +27,9 @@ src="https://codecov.io/gh/bcbi/PredictMDAPI.jl/branch/master/graph/badge.svg"
 /></a>
 </p>
 
-The PredictMDAPI package provides the abstract types and generic functions that define the [PredictMD](https://predictmd.net) application programming interface (API).
+The PredictMDAPI package provides the abstract types, traits, and functions that define the [PredictMD](https://predictmd.net) application programming interface (API).
+
+This is a very lightweight package. It has no dependencies. The only lines of code are:
+- Abstract types, i.e. `abstract type Foo end`
+- Immutable composite types with no fields, i.e. `struct Bar <: Foo end`
+- Function stubs, i.e. `function hello end`
