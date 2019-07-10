@@ -19,12 +19,12 @@ if !isnothing(logger)
         println(logger.stream, "# End of test environment Manifest.toml")
     else
         println(logger.stream, "# File \"$(joinpath(dirname(Base.active_project()), "Manifest.toml"))\" does not exist")
-    end 
+    end
 end
 
 logger = Base.CoreLogging.current_logger_for_env(Base.CoreLogging.Debug, Symbol(splitext(basename(something(@__FILE__, "nothing")))[1]), something(@__MODULE__, "nothing"))
 if !isnothing(logger)
-    if ispath(PredictMDAPI.package_directory("Project.toml"))
+    if ispath(joinpath(dirname(pathof(PredictMDAPI)), "..", "Project.toml"))
         println(logger.stream, "# Location of PredictMDAPI package Project.toml: \"$(joinpath(dirname(pathof(PredictMDAPI)), "..", "Project.toml"))\"")
         println(logger.stream, "# Beginning of PredictMDAPI package Project.toml")
         println(logger.stream, read(joinpath(dirname(pathof(PredictMDAPI)), "..", "Project.toml"), String))
@@ -32,7 +32,7 @@ if !isnothing(logger)
     else
         println(logger.stream, "# File \"$(joinpath(dirname(pathof(PredictMDAPI)), "..", "Project.toml"))\" does not exist")
     end
-    if ispath(PredictMDAPI.package_directory("Manifest.toml"))
+    if ispath(joinpath(dirname(pathof(PredictMDAPI)), "..", "Manifest.toml"))
         println(logger.stream, "# Location of PredictMDAPI package Manifest.toml: \"$(joinpath(dirname(pathof(PredictMDAPI)), "..", "Manifest.toml"))\"")
         println(logger.stream, "# Beginning of PredictMDAPI package Manifest.toml")
         println(logger.stream, read(joinpath(dirname(pathof(PredictMDAPI)), "..", "Manifest.toml"),String))
