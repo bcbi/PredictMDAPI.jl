@@ -1,8 +1,4 @@
-block_labels = [
-    "S-do-not-merge-yet",
-    "S-needs-tests",
-    "S-work-in-progress",
-    ]
+block_labels = [ "DO NOT MERGE" ]
 
 delete_merged_branches = true
 
