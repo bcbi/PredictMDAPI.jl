@@ -51,6 +51,13 @@ julia $JULIA_FLAGS -e '
     '
 
 julia $JULIA_FLAGS -e '
+    import Coverage;
+    import PredictMDAPI;
+    cd(joinpath(dirname(pathof(PredictMDAPI)), "..",));
+    Coverage.Coveralls.submit(Coverage.Coveralls.process_folder());
+    '
+
+julia $JULIA_FLAGS -e '
     logger = Base.CoreLogging.current_logger_for_env(Base.CoreLogging.Debug, Symbol(splitext(basename(something(@__FILE__, "nothing")))[1]), something(@__MODULE__, "nothing"))
     if !isnothing(logger)
         if ispath(Base.active_project())
