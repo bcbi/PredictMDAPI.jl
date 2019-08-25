@@ -47,14 +47,14 @@ julia $JULIA_FLAGS -e '
     import Coverage;
     import PredictMDAPI;
     cd(joinpath(dirname(pathof(PredictMDAPI)), "..",));
-    Coverage.Codecov.submit(Coverage.Codecov.process_folder());
+    Coverage.Coveralls.submit(Coverage.Coveralls.process_folder());
     '
 
 julia $JULIA_FLAGS -e '
     import Coverage;
     import PredictMDAPI;
     cd(joinpath(dirname(pathof(PredictMDAPI)), "..",));
-    Coverage.Coveralls.submit(Coverage.Coveralls.process_folder());
+    Coverage.Codecov.submit(Coverage.Codecov.process_folder());
     '
 
 julia $JULIA_FLAGS -e '
