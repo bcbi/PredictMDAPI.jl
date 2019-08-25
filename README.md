@@ -25,6 +25,12 @@ href="https://codecov.io/gh/bcbi/PredictMDAPI.jl/branch/master">
 <img
 src="https://codecov.io/gh/bcbi/PredictMDAPI.jl/branch/master/graph/badge.svg"
 /></a>
+<a
+href='https://coveralls.io/github/bcbi/PredictMDAPI.jl?branch=master'>
+<img
+src='https://coveralls.io/repos/github/bcbi/PredictMDAPI.jl/badge.svg?branch=master'
+alt='Coverage Status'
+/></a>
 </p>
 
 The PredictMDAPI package provides the abstract types, traits, and functions that define the [PredictMD](https://predictmd.net) application programming interface (API).
