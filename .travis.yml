@@ -1,5 +1,3 @@
-##### Beginning of file
-
 branches:
     only:
     - master
@@ -8,25 +6,19 @@ branches:
     - /^release\/.*$/ # release branches
     - /^v[0-9]+\.[0-9]+\.[0-9]+$/ # version tags
 
-env:
-    global:
-        - JULIA_DEBUG="all"
-    matrix:
-        - COMPILED_MODULES="no"
-        - COMPILED_MODULES="yes"
-
 git:
     depth: 99999999
 
 julia:
+    - "1.0"
+    - "1.1"
     - "1.2"
+    - "1.3"
+    - "nightly"
 
 language: julia
 
 matrix:
-    allow_failures:
-        - julia: "nightly"
-        - os: osx
     fast_finish: true
 
 notifications:
@@ -36,11 +28,9 @@ notifications:
 
 os:
     - linux
-#     - osx
+    - osx
+    - windows
 
-############################################################################
+script: julia --code-coverage --inline=no -e 'using Pkg; Pkg.build(); Pkg.test(coverage=true)'
 
-script: ./ci/travis/script.sh
-
-##### End of file
-
+after_success: julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
