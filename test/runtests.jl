@@ -3,7 +3,7 @@ import PredictMDAPI
 import Test
 
 logger = Base.CoreLogging.current_logger_for_env(Base.CoreLogging.Debug, Symbol(splitext(basename(something(@__FILE__, "nothing")))[1]), something(@__MODULE__, "nothing"))
-if !isnothing(logger)
+if logger !== nothing
     if ispath(Base.active_project())
         println(logger.stream, "# Location of test environment Project.toml: \"$(Base.active_project())\"")
         println(logger.stream, "# Beginning of test environment Project.toml")
@@ -23,7 +23,7 @@ if !isnothing(logger)
 end
 
 logger = Base.CoreLogging.current_logger_for_env(Base.CoreLogging.Debug, Symbol(splitext(basename(something(@__FILE__, "nothing")))[1]), something(@__MODULE__, "nothing"))
-if !isnothing(logger)
+if logger !== nothing
     if ispath(joinpath(dirname(pathof(PredictMDAPI)), "..", "Project.toml"))
         println(logger.stream, "# Location of PredictMDAPI package Project.toml: \"$(joinpath(dirname(pathof(PredictMDAPI)), "..", "Project.toml"))\"")
         println(logger.stream, "# Beginning of PredictMDAPI package Project.toml")
